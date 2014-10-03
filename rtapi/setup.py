@@ -1,6 +1,8 @@
 import os
 from setuptools import setup
 
+exec(open('rtapi/_version.py').read())
+
 # Utility function to read the README file.
 # Used for the long_description.  It's nice, because now 1) we have a top level
 # README file and 2) it's easier to type in the README file than to put a raw
@@ -10,7 +12,7 @@ def read(fname):
 
 setup(
     name = "rtapi",
-    version = "0.1.2",
+    version = __version__,
     author = "Robert Vojcik",
     author_email = "robert@vojcik.net",
     description = ("Racktables API"
