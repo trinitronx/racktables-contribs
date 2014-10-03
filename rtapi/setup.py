@@ -1,7 +1,8 @@
 import os
 from setuptools import setup
 
-exec(open('rtapi/_version.py').read())
+setup_py_path = os.path.dirname(os.path.realpath(__file__))
+exec(open(os.path.join( setup_py_path, 'rtapi', '_version.py')).read())
 
 # Utility function to read the README file.
 # Used for the long_description.  It's nice, because now 1) we have a top level
